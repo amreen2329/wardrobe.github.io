@@ -1,0 +1,336 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  text-transform: capitalize;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+header {
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  padding-right: 1vw;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+header .navbar ul {
+  list-style: none;
+}
+header .navbar ul li {
+  position: relative;
+  float: left;
+  text-decoration: none;
+}
+header .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: #43505a;
+  display: block;
+}
+header .navbar ul li a:hover {
+  background: #43405a;
+  color: #fff;
+}
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  margin-top: 15px;
+  width: 200px;
+  background: #fff;
+  display: none;
+}
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid #43505a;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+.bar {
+  display: none;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 1s ease-out;
+  background-color: #43405a;
+}
+
+.logo {
+  height: 10vh;
+  width: 10vw;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  background: #eee;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.container .title {
+  font-size: 3.5rem;
+  color: #43505a;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.container .products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+.container .products-container .product {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #fff;
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  outline: 0.1rem solid #ccc;
+  outline-offset: -1.5rem;
+  cursor: pointer;
+}
+.container .products-container .product:hover {
+  outline: 0.1rem solid #43505a;
+  outline-offset: 0;
+}
+.container .products-container .product img {
+  height: 30rem;
+}
+.container .products-container .product:hover img {
+  transform: scale(0.9);
+}
+.container .products-container .product h3 {
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  color: #43505a;
+}
+.container .products-container .product .price {
+  font-size: 2.5rem;
+  color: #43505a;
+  height: auto;
+  width: auto;
+  background-color: #c1cfda;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+.color {
+  height: 2vh;
+  width: 10vw;
+}
+/* img {
+      height: 35vh;
+      width: 20vw;
+    } */
+.products-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.products-preview .preview {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  margin: 2rem;
+  width: 40rem;
+}
+.products-preview .preview.active {
+  display: inline-block;
+}
+.products-preview .preview .img {
+  height: 35rem;
+}
+.products-preview .preview .fa-times {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  color: #444;
+  font-size: 3rem;
+}
+.products-preview .preview .fa-times:hover {
+  transform: rotate(90deg);
+}
+.products-preview .preview h3 {
+  color: #43505a;
+  padding: 5rem 0;
+  font-size: 2.5rem;
+}
+.products-preview .preview p {
+  line-height: 1.5;
+  padding: 1rem 0;
+  font-size: 1.7rem;
+  color: #43505a;
+}
+.products-preview .preview .price {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #43505a;
+}
+.products-preview .preview .button {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.products-preview .preview .button a {
+  flex: 1 1 16rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: #43505a;
+  background-color: #c1cfda;
+}
+.products-preview .preview .button a.buy:hover {
+  background-color: #43505a;
+  color: #c1cfda;
+}
+.site-footer {
+  background-color: #c1cfda;
+  color: #43505a;
+  padding: 20px 0;
+  margin-top: 10vh;
+}
+
+.container_footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.footer-links ul li a {
+  color: #43505a;
+  text-decoration: none;
+}
+.para {
+  color: #43505a;
+  margin: 1.4vw;
+  font-size: 1.5em;
+}
+h3 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+#socials {
+  max-width: 40px;
+  width: 40px;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  .products-preview .preview .img {
+    height: 25rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (min-width: 280px) and (max-width: 767px) {
+  .hamburger {
+    display: block;
+    padding: 2vw;
+  }
+  .bar {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    margin-top: 8.5vh;
+  }
+  .nav-menu.active {
+    left: 0;
+    padding: 0px;
+  }
+  header .navbar ul li {
+    width: 100%;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  .logo {
+    height: 20vh;
+    width: 20vw;
+  }
+}
+@media (max-width: 600px) {
+  .container_footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    min-width: 100%;
+    text-align: center;
+  }
+}

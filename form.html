@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1 class="title">Sign Up</h1>
+        <div class="underline"></div>
+        <form action="">
+          <div class="input-group">
+            <div class="input-field namefield">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" name="name" id="name" placeholder="Name" />
+              <span class="error">This cannot be left blank</span>
+            </div>
+            <!--end input field-->
+            <div class="input-field lnamefield">
+              <i class="fa-solid fa-user"></i>
+              <input
+                type="text"
+                name="lname"
+                id="lname"
+                placeholder="Last Name"
+              />
+              <span class="error">This cannot be left blank</span>
+            </div>
+            <!--end input field-->
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" name="email" id="email" placeholder="Email" />
+              <span class="error">Invalid Email</span>
+            </div>
+            <!--end input field-->
+
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                placeholder="Password"
+              />
+              <span class="error"
+                >Password cannot be less than 6 characters</span
+              >
+            </div>
+            <!--end input field-->
+          </div>
+          <!--end input group-->
+          <div class="btn-field">
+            <button type="button" class="signupbtn">Sign Up</button>
+            <button type="button" class="disable signinbtn">Sign In</button>
+          </div>
+          <a class="fas fa-home" href="index.html"></a>
+        </form>
+      </div>
+      <!--end form-box-->
+    </div>
+    <!--end container-->
+  </body>
+  <script src="from.js"></script>
+</html>

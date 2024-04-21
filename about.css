@@ -1,0 +1,249 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+header {
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  padding-right: 1vw;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+header .navbar ul {
+  list-style: none;
+}
+header .navbar ul li {
+  position: relative;
+  float: left;
+  text-decoration: none;
+}
+header .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: #43505a;
+  display: block;
+}
+header .navbar ul li a:hover {
+  background: #43405a;
+  color: #fff;
+}
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  margin-top: 15px;
+  width: 200px;
+  background: #fff;
+  display: none;
+}
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid #43505a;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+.bar {
+  display: none;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 1s ease-out;
+  background-color: #43405a;
+}
+
+.logo {
+  height: 10vh;
+  width: 10vw;
+}
+.container_faq {
+  background-color: #c1cfda;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  color: #4d6c84;
+  font-size: 1.3rem;
+}
+
+.content-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.heading {
+  margin: 0;
+  padding: 10px;
+  background-color: #c1cfda;
+  color: #4d6c84;
+  text-align: left;
+}
+
+.content {
+  padding: 10px;
+}
+.about {
+  display: flex;
+  margin-bottom: 10rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: #c1cfda;
+  margin-top: 5%;
+}
+.about img {
+  width: 30vw;
+  height: 60vh;
+}
+.about h1 {
+  margin-left: 7rem;
+  font-size: 3.5rem;
+  margin-top: 7rem;
+  color: #43505a;
+}
+.about p {
+  width: 40vw;
+  margin-left: 7rem;
+  font-size: 1.6rem;
+  color: #43505a;
+}
+.ques {
+  text-align: center;
+  font-size: 3rem;
+  color: #43505a;
+}
+.site-footer {
+  background-color: #c1cfda;
+  color: #43505a;
+  padding: 20px 0;
+  margin-top: 10vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li a {
+  color: #43505a;
+  text-decoration: none;
+}
+.para {
+  color: #43505a;
+}
+h3 {
+  margin-top: 0;
+}
+#socials {
+  max-width: 40px;
+  width: 40px;
+}
+@media screen and (min-width: 280px) and (max-width: 767px) {
+  .hamburger {
+    display: block;
+    padding: 2vw;
+  }
+  .bar {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    margin-top: 8.5vh;
+  }
+  .nav-menu.active {
+    left: 0;
+    padding: 0px;
+  }
+  header .navbar ul li {
+    width: 100%;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  .logo {
+    height: 20vh;
+    width: 20vw;
+  }
+
+  .about {
+    display: block;
+  }
+  .about img {
+    width: 75vw;
+    height: 40vh;
+  }
+  .about h1 {
+    margin-left: 9%;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+  .about p {
+    width: 45vw;
+    height: 40vh;
+    margin-left: 3rem;
+    font-size: 1rem;
+    overflow: scroll;
+    padding-bottom: 3rem;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    min-width: 100%;
+    text-align: center;
+  }
+}
